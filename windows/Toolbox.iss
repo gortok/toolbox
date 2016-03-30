@@ -184,7 +184,7 @@ end;
 function NeedToInstallGit(): Boolean;
 begin
   // TODO: Find a better way to see if Git is installed
-  Result := not DirExists('C:\Program Files\Git') or not FileExists('C:\Program Files\Git\git-bash.exe')
+  Result := not DirExists('C:\Program Files\Git') or not FileExists('C:\Program Files\Git\git-bash.exe') or not DirExists('C:\Program Files (x86)\Git') or not FileExists('C:\Program Files (x86)\Git\git-bash.exe')
 end;
 
 procedure InitializeWizard;
